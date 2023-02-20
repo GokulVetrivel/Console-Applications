@@ -41,21 +41,25 @@ public class BookingView implements BookingViewCallBack {
 	private void getBookings() {
 		List<Booking> bookings= bookingController.getBooking();
 		for(Booking booking: bookings) {
-			//booking.displayBooking();
-			System.out.println("Passenger Name :"+booking.getPassengerName()+"\tPassenger Age :"+booking.getPassengerAge()+"\tFlight No :"+booking.getFlightNo()+"\tBooking Id :"+booking.getBooking_id());
+			System.out.println("Booking Id :"+booking.getBooking_id()+"\tPassenger Name :"+booking.getPassengerName()+"\tPassenger Age :"+booking.getPassengerAge()+"\tGender :"+booking.getGender()+"\tFlight No :"+booking.getFlightNo()+"\tTravel Date :"+booking.getTravelDate());
 		}
 	}
-
+	public String getDate() {
+		System.out.println("Enter travel date (dd/mm/yyyy):");
+		String travel_Date=scan.next();
+		return travel_Date;
+	}
 	private void addBooking() {
 		System.out.print("Enter passenger name :");
 		String name=scan.next();
+		System.out.print("Gender :");
+		String gender=scan.next();
 		System.out.print("Enter passenger age :");
 		byte age=scan.nextByte();
 		System.out.print("enter FlightNo :");
 		int flightNo=scan.nextInt(); 
-	
 		Booking booking =new Booking();
-		bookingController.addBooking(name,age,flightNo,booking_id++,booking);
+		bookingController.addBooking(name,gender,age,flightNo,booking_id++,booking);
 	}
 
 	public void bookingFailed(String message) {

@@ -5,5 +5,7 @@ public interface BookingViewCallBack {
 	void bookingFailed(String message);
 
 	void bookingSuccess(String message);
+	
+	String getDate();
 
 }

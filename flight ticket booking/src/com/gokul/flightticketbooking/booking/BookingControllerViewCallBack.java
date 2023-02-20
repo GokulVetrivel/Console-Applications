@@ -9,7 +9,7 @@ public interface BookingControllerViewCallBack {
 
 	List<Booking> getBooking();
 
-	void addBooking(String name, byte age, int flightNo, int i, Booking booking);
+	void addBooking(String name, String gender, byte age, int flightNo, int i, Booking booking);
 
 	List<Flight> getFlights();
 

@@ -5,10 +5,16 @@ import java.util.*;
 public class Booking {
 	private String passengerName;
 	private byte passengerAge;
-	//private String gender;
+	private String gender;
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 	private int flightNo;
 	private int booking_id;
-	private Date date;
+	private Date travel_Date;
 	
 	public int getBooking_id() {
 		return booking_id;
@@ -35,15 +41,10 @@ public class Booking {
 		this.flightNo = flightNo;
 	}
 	
-	public Date getDate() {
-		return date;
+	public Date getTravelDate() {
+		return travel_Date;
 	}
-	public void setDate(Date date) {
-		this.date = date;
+	public void setTravelDate(Date travel_Date) {
+		this.travel_Date = travel_Date;
 	}
-	
-	public void displayBooking() {
-		System.out.println("Passenger Name :"+passengerName+"\tPassenger Age :"+passengerAge+"\tFlight No :"+flightNo+"\tBooking Id :"+booking_id);
-	}
-	
 }
